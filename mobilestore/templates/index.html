@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>Mobile Store</title>
+</head>
+<body>
+    <h1>New Mobile Entry</h1>
+    <hr/>
+    <form method="POST" action="/product/productreg/">
+        {% csrf_token %}
+    <table border="1">
+        <tr>
+            <td> Mobile Name</td>
+            <td><input type="text" placeholder="Enter Mobile Name" name="name"></td>
+        </tr>
+        <tr>
+            <td>Brand</td>
+            <td><input type="text" placeholder="Enter Brand Name" name="brand"></td>
+        </tr>
+        <tr>
+            <td>Ram</td>
+            <td><input type="text" placeholder="Enter Ram" name="ram"></td>
+        </tr>
+        <tr>
+            <td>Storage</td>
+            <td><input type="text" placeholder="Enter Storage" name="storage"></td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td><input type="number" placeholder="Enter Price" name="price"></td>
+        </tr>
+        <tr>
+            <td>Stock</td>
+            <td><input type="number" placeholder="Enter Stock" name="stock"></td>
+        </tr>
+    </table>
+    <hr/>
+    <input type="submit" value="submit">
+    </form>
+</body>
+</html>
