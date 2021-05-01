@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mobile Details</title>
+        <!-- <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"> -->
+
+    </head>
+    <body>
+        <h1>THE MOBILE STORE</h1>
+        {% if res %}
+            <h1>Show Data</h1>
+            <table id="dtHorizontalExample" class="table table-striped table-bordered table-sm table1 dt-rsponsive nowrap" style="margin-top:50px;">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Brand</th>
+                <th>Ram</th>
+                <th>Storage</th>
+                <th>Price</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in res %}
+            <tr>
+                <td>{{ i.id }}</td>
+                <td>{{ i.name }}</td>
+                <td>{{ i.brand }}</td>
+                <td>{{ i.ram }}</td>
+                <td>{{ i.storage }}</td>
+                <td>{{ i.price }}</td>
+                <td>{{ i.storage }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+        {% endif %}
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+            <link rel="stylesheet" href="http://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+            <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+        <script>
+            $(document).ready(function(){
+            $('table.table1').DataTable();
+            });
+            </script>
+            
+    </body>
+</html>

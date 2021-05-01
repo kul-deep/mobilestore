@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>New Mobile </title>
+    </head>
+    <body>        
+        <div class="form_wrapper" id="id1">
+            <div class="form_container">
+            <div class="title_container">
+                <h2>New Mobile Entry</h2>
+            </div>
+            <div class="row clearfix">
+                <div class="">
+                <form method="POST" action="/product/productreg/">
+                    {% csrf_token %}
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-mobile"></i></span>
+                    <input type="text" id="id1" name="name" placeholder="Enter Mobile Name" required />
+                    </div>
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-copyright"></i></span>
+                    <input type="text" id="id1" name="brand" placeholder="Enter Brand Name" required />
+                    </div>
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-save"></i></span>
+                    <input type="text" id="id1" name="ram" placeholder="Enter Ram" required />
+                    </div><div class="input_field"> <span><i aria-hidden="true" class="fa fa-memory"></i></span>
+                    <input type="text" id="id1" name="storage" placeholder="Enter Storage" required />
+                    </div>
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-money"></i></span>
+                        <input type="number" id="id1" name="price" placeholder="Enter Price" required />
+                    </div>
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-line-chart"></i></span>
+                        <input type="number" id="id1" name="stock" placeholder="Enter Stock" required />
+                    </div>
+                    <input class="button" id="id1" type="submit" value="submit" />
+                </form>
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>
+    
+  </html>

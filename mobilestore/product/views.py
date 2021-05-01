@@ -26,6 +26,9 @@ def productreg(request):
         return render(request, 'index.html')
     else:
         return render(request, 'index.html')
+def productretrieve(request):
+    result=Phone.objects.all()
+    return render(request,'phonedetails.html',{'res':result})
 
 
 

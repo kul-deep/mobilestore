@@ -1,9 +1,154 @@
 <!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+        <link rel="stylesheet" href="{% static 'index.css' %}">
+        <title>Mobile Store</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+<body>
+	<div class="center">
+    <a href="/product/productretrieve/"> Product retrieve</a> 
+        <h1>New Mobile Entry</h1>
+        <form method="POST" action="/product/productreg/">
+        {% csrf_token %}
+		<table>
+			<tr>
+				<td style="width: 33.33%;">
+					<div class="dash"></div>
+				</td>
+				<td style="padding: 0 6px;">
+					<h1>Register</h1>
+				</td>
+				<td style="width: 33.33%;">
+					<div class="dash"></div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<div>
+                        <input type="text" name="name" placeholder="Enter Mobile Name" required />	
+					</div>
+				</td>
+			</tr>
+            <tr>
+				<td colspan="3">
+					<div>
+                        <input type="text" name="brand" placeholder="Enter Brand Name" required />
+                    </div>
+				</td>
+			</tr>
+            <tr>
+				<td colspan="3">
+					<div>
+                        <input type="text" name="ram" placeholder="Enter Ram" required />
+                    </div>
+				</td>
+			</tr>
+            <tr>
+				<td colspan="3">
+					<div>
+                        <input type="text" name="storage" placeholder="Enter Storage" required />
+                    </div>
+				</td>
+			</tr>
+            <tr>
+				<td colspan="3">
+					<div>
+                        <input type="number" name="price" placeholder="Enter Price" required />
+                    </div>
+				</td>
+			</tr>
+            <tr>
+				<td colspan="3">
+					<div>
+                        <input type="number" name="stock" placeholder="Enter Stock" required />
+                    </div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<div>
+						<input type="submit" value="submit">
+					</div>
+				</td>
+			</tr>
+		</table>
+        </form>
+	</div>
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+        <link rel="stylesheet" href="{% static 'index.css' %}">
+        <title>Mobile Store</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>        
+        <div class="form_wrapper" id="id1">
+            <div class="form_container">
+            <div class="title_container">
+                <h2>New Mobile Entry</h2>
+                <h1>New Mobile Entry</h1>
+    <a href="/product/productretrieve/"> Product retrieve</a>
+            </div>
+            <div class="row clearfix">
+                <div class="">
+                <form method="POST" action="/product/productreg/">
+                    {% csrf_token %}
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-mobile"></i></span>
+                    <input type="text" id="id1" name="name" placeholder="Enter Mobile Name" required />
+                    </div>
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-copyright"></i></span>
+                    <input type="text" id="id1" name="brand" placeholder="Enter Brand Name" required />
+                    </div>
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-save"></i></span>
+                    <input type="text" id="id1" name="ram" placeholder="Enter Ram" required />
+                    </div><div class="input_field"> <span><i aria-hidden="true" class="fa fa-memory"></i></span>
+                    <input type="text" id="id1" name="storage" placeholder="Enter Storage" required />
+                    </div>
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-money"></i></span>
+                        <input type="number" id="id1" name="price" placeholder="Enter Price" required />
+                    </div>
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-line-chart"></i></span>
+                        <input type="number" id="id1" name="stock" placeholder="Enter Stock" required />
+                    </div>
+                    <input class="button" id="id1" type="submit" value="submit" />
+                </form>
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>
+    
+  </html>
+ -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <head>
     <title>Mobile Store</title>
 </head>
 <body>
     <h1>New Mobile Entry</h1>
+    <a href="/product/productretrieve/"> Product retrieve</a>
     <hr/>
     <form method="POST" action="/product/productreg/">
         {% csrf_token %}
@@ -37,4 +182,4 @@
     <input type="submit" value="submit">
     </form>
 </body>
-</html>
+</html> -->
