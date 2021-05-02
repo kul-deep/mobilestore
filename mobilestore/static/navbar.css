@@ -20,14 +20,9 @@
     }
   }
   /* faz o contato ir para o lado direito da pagina */
-  .push {
-    margin-left: auto;
-  }
-  
   li {
     padding: 20px;
   }
-  
   a {
     text-decoration: none;
     color: white;

@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>Mobile Details</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'phonedetails.css' %}">
         <!-- <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"> -->
 
     </head>
@@ -20,19 +22,34 @@
                 <th>Storage</th>
                 <th>Price</th>
                 <th>Stock</th>
+                <th>Availability</th>
             </tr>
         </thead>
         <tbody>
             {% for i in res %}
-            <tr>
-                <td>{{ i.id }}</td>
-                <td>{{ i.name }}</td>
-                <td>{{ i.brand }}</td>
-                <td>{{ i.ram }}</td>
-                <td>{{ i.storage }}</td>
-                <td>{{ i.price }}</td>
-                <td>{{ i.stock }}</td>
-            </tr>
+                {% ifequal i.stock 0 %}
+                <tr align="center">
+                    <td class="blur">{{ i.id }}</td>
+                    <td class="blur">{{ i.name }}</td>
+                    <td class="blur">{{ i.brand }}</td>
+                    <td class="blur">{{ i.ram }}</td>
+                    <td class="blur">{{ i.storage }}</td>
+                    <td class="blur">{{ i.price }}</td>
+                    <td class="blur">{{ i.stock }}</td>
+                    <td>Not Available</td>
+                </tr>
+                {% else %}
+                <tr align="center">
+                    <td>{{ i.id }}</td>
+                    <td>{{ i.name }}</td>
+                    <td>{{ i.brand }}</td>
+                    <td>{{ i.ram }}</td>
+                    <td>{{ i.storage }}</td>
+                    <td>{{ i.price }}</td>
+                    <td>{{ i.stock }}</td>
+                    <td>Available</td>
+                </tr>
+                {% endifequal %}
             {% endfor %}
         </tbody>
         </table>
