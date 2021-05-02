@@ -29,6 +29,9 @@ def productreg(request):
 def productretrieve(request):
     result=Phone.objects.all()
     return render(request,'phonedetails.html',{'res':result})
+def productavailable(request):
+    available=Phone.objects.filter(stock__gte=1)
+    return render(request,'phoneavailable.html',{'avail':available})
 
 
 

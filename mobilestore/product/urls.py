@@ -19,5 +19,6 @@ from . import views
 
 urlpatterns = [
     path('productreg/', views.productreg, name='productreg'),
-    path('productretrieve/',views.productretrieve, name='productretrieve')
+    path('productretrieve/',views.productretrieve, name='productretrieve'),
+    path('productavailable/',views.productavailable, name='productavailable')
 ]
