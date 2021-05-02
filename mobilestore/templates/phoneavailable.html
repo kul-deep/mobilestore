@@ -3,7 +3,6 @@
 <html>
     <head>
         <title>Mobile Details</title>
-        <!-- <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"> -->
         <link rel="stylesheet" href="{% static 'index.css' %}">
         <link rel="stylesheet" href="{% static 'phoneTable.css' %}">
     </head>
@@ -26,7 +25,7 @@
         <tbody>
             {% for i in avail %}
             <tr align="center">
-                <td>{{ i.id }}</td>
+                <td>{{ forloop.counter }}</td>
                 <td>{{ i.name }}</td>
                 <td>{{ i.brand }}</td>
                 <td>{{ i.ram }}</td>

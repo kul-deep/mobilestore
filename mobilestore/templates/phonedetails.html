@@ -5,7 +5,6 @@
         {% load static %}
         <link rel="stylesheet" href="{% static 'index.css' %}">
         <link rel="stylesheet" href="{% static 'phoneTable.css' %}">
-        <!-- <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"> -->
 
     </head>
     <body>
@@ -29,7 +28,7 @@
             {% for i in res %}
                 {% ifequal i.stock 0 %}
                 <tr align="center">
-                    <td class="blur">{{ i.id }}</td>
+                    <td class="blur">{{ forloop.counter }}</td>
                     <td class="blur">{{ i.name }}</td>
                     <td class="blur">{{ i.brand }}</td>
                     <td class="blur">{{ i.ram }}</td>
@@ -40,7 +39,7 @@
                 </tr>
                 {% else %}
                 <tr align="center">
-                    <td>{{ i.id }}</td>
+                    <td>{{ forloop.counter }}</td>
                     <td>{{ i.name }}</td>
                     <td>{{ i.brand }}</td>
                     <td>{{ i.ram }}</td>

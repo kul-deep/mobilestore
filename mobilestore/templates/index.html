@@ -27,6 +27,15 @@
 					<div class="dash"></div>
 				</td>
 			</tr>
+            {% if msg %}
+            <tr id="tr1">
+                <td colspan="3">
+                    <div>
+                        <span>{{ msg }}</span>
+                    </div>
+                </td>
+            </tr>
+            {% endif %}
 			<tr>
 				<td colspan="3">
 					<div>
@@ -81,104 +90,3 @@
 	</div>
 </body>
 </html>
-
-
-
-
-<!-- <!DOCTYPE html>
-{% load static %}
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-        <link rel="stylesheet" href="{% static 'index.css' %}">
-        <title>Mobile Store</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>        
-        <div class="form_wrapper" id="id1">
-            <div class="form_container">
-            <div class="title_container">
-                <h2>New Mobile Entry</h2>
-                <h1>New Mobile Entry</h1>
-    <a href="/product/productretrieve/"> Product retrieve</a>
-            </div>
-            <div class="row clearfix">
-                <div class="">
-                <form method="POST" action="/product/productreg/">
-                    {% csrf_token %}
-                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-mobile"></i></span>
-                    <input type="text" id="id1" name="name" placeholder="Enter Mobile Name" required />
-                    </div>
-                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-copyright"></i></span>
-                    <input type="text" id="id1" name="brand" placeholder="Enter Brand Name" required />
-                    </div>
-                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-save"></i></span>
-                    <input type="text" id="id1" name="ram" placeholder="Enter Ram" required />
-                    </div><div class="input_field"> <span><i aria-hidden="true" class="fa fa-memory"></i></span>
-                    <input type="text" id="id1" name="storage" placeholder="Enter Storage" required />
-                    </div>
-                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-money"></i></span>
-                        <input type="number" id="id1" name="price" placeholder="Enter Price" required />
-                    </div>
-                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-line-chart"></i></span>
-                        <input type="number" id="id1" name="stock" placeholder="Enter Stock" required />
-                    </div>
-                    <input class="button" id="id1" type="submit" value="submit" />
-                </form>
-                </div>
-            </div>
-            </div>
-        </div>
-    </body>
-    
-  </html>
- -->
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<head>
-    <title>Mobile Store</title>
-</head>
-<body>
-    <h1>New Mobile Entry</h1>
-    <a href="/product/productretrieve/"> Product retrieve</a>
-    <hr/>
-    <form method="POST" action="/product/productreg/">
-        {% csrf_token %}
-    <table border="1">
-        <tr>
-            <td> Mobile Name</td>
-            <td><input type="text" placeholder="Enter Mobile Name" name="name"></td>
-        </tr>
-        <tr>
-            <td>Brand</td>
-            <td><input type="text" placeholder="Enter Brand Name" name="brand"></td>
-        </tr>
-        <tr>
-            <td>Ram</td>
-            <td><input type="text" placeholder="Enter Ram" name="ram"></td>
-        </tr>
-        <tr>
-            <td>Storage</td>
-            <td><input type="text" placeholder="Enter Storage" name="storage"></td>
-        </tr>
-        <tr>
-            <td>Price</td>
-            <td><input type="number" placeholder="Enter Price" name="price"></td>
-        </tr>
-        <tr>
-            <td>Stock</td>
-            <td><input type="number" placeholder="Enter Stock" name="stock"></td>
-        </tr>
-    </table>
-    <hr/>
-    <input type="submit" value="submit">
-    </form>
-</body>
-</html> -->
