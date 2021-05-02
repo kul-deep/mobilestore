@@ -13,16 +13,15 @@
 <body>
     {% include "navbar.html" %}
 	<div class="center">
-        <h1>New Mobile Entry</h1>
         <form method="POST" action="/product/productreg/">
         {% csrf_token %}
-		<table>
+		<table id="id1" class="tableForm">
 			<tr>
 				<td style="width: 33.33%;">
 					<div class="dash"></div>
 				</td>
 				<td style="padding: 0 6px;">
-					<h1>Register</h1>
+					<h1>Add Phone</h1>
 				</td>
 				<td style="width: 33.33%;">
 					<div class="dash"></div>
@@ -31,49 +30,49 @@
 			<tr>
 				<td colspan="3">
 					<div>
-                        <input type="text" name="name" placeholder="Enter Mobile Name" required />	
+                        <input type="text" name="name" placeholder="Enter Mobile Name" id="id1" required />	
 					</div>
 				</td>
 			</tr>
             <tr>
 				<td colspan="3">
 					<div>
-                        <input type="text" name="brand" placeholder="Enter Brand Name" required />
+                        <input type="text" name="brand" placeholder="Enter Brand Name" id="id1" required />
                     </div>
 				</td>
 			</tr>
             <tr>
 				<td colspan="3">
 					<div>
-                        <input type="text" name="ram" placeholder="Enter Ram" required />
+                        <input type="text" name="ram" placeholder="Enter Ram" id="id1" required />
                     </div>
 				</td>
 			</tr>
             <tr>
 				<td colspan="3">
 					<div>
-                        <input type="text" name="storage" placeholder="Enter Storage" required />
+                        <input type="text" name="storage" placeholder="Enter Storage" id="id1" required />
                     </div>
 				</td>
 			</tr>
             <tr>
 				<td colspan="3">
 					<div>
-                        <input type="number" name="price" placeholder="Enter Price" required />
+                        <input type="number" name="price" placeholder="Enter Price" id="id1" required />
                     </div>
 				</td>
 			</tr>
             <tr>
 				<td colspan="3">
 					<div>
-                        <input type="number" name="stock" placeholder="Enter Stock" required />
+                        <input type="number" name="stock" placeholder="Enter Stock" id="id1" required />
                     </div>
 				</td>
 			</tr>
 			<tr>
 				<td colspan="3">
 					<div>
-						<input type="submit" value="submit">
+						<input type="submit" value="Submit" id="id1">
 					</div>
 				</td>
 			</tr>

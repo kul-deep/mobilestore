@@ -1,0 +1,30 @@
+
+.blur{
+    filter:blur(1px);
+    left: 0;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+}
+#id3{
+    color: red;
+}
+#id4{
+    color: green;
+}
+.id2 {
+    background-color: white;
+
+}
+#dtHorizontalExample{
+    border-color: rgba(111, 85, 184, 0.24);
+}
+.table1{
+	margin: 0 auto;
+	padding: 2%;
+
+	border-radius: 4px;
+	background-color: #f7e9e9;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	border: 1px solid #58677B;
+}

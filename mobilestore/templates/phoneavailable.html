@@ -1,25 +1,26 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
     <head>
         <title>Mobile Details</title>
         <!-- <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"> -->
-
+        <link rel="stylesheet" href="{% static 'index.css' %}">
+        <link rel="stylesheet" href="{% static 'phoneTable.css' %}">
     </head>
     <body>
         {% include "navbar.html" %}
         <h1>THE MOBILE STORE</h1>
         {% if avail %}
-            <h1>Show Data</h1>
-            <table id="dtHorizontalExample" class="table table-striped table-bordered table-sm table1 dt-rsponsive nowrap" style="margin-top:50px;">
+            <table id="dtHorizontalExample" class="table1" border="1">
             <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Brand</th>
-                <th>Ram</th>
-                <th>Storage</th>
-                <th>Price</th>
-                <th>Stock</th>
+            <tr id="id2">
+                <th class="id2">Id</th>
+                <th class="id2">Name</th>
+                <th class="id2">Brand</th>
+                <th class="id2">Ram</th>
+                <th class="id2">Storage</th>
+                <th class="id2">Price</th>
+                <th class="id2">Stock</th>
             </tr>
         </thead>
         <tbody>
